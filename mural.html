@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mural</title>
+    <!-- JQuery -->
+    <script src="assets/libraries/jquery/jquery-3.3.1.js"></script>
+    <!-- Compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Offline Materialize CSS -->
+    <link rel="stylesheet" href="assets/libraries/materialize/css/materialize.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <!-- Offline Materialize JS -->
+
+    <script src="assets/libraries/materialize/js/materialize.js"></script>
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="assets/resources/styles/custom.css">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body onload="iniciar()">
+
+    <div class="gradient-vertical-white-black">
+        <div class="row">
+            <div class="center col m11">
+                <nav class="nav-wrapper">
+
+                    <!-- Mobile -->
+
+                    <a href="#" data-target="dropdown1" class="mobi-nav sidenav-trigger dropdown-trigger"><i class="mobi-nav left material-icons">menu</i></a>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li class="dropdown-item"><a href="index.html"><span class="my-dropdown-item-font">Início</span></a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li class="dropdown-item"><a href="causas.html"><span class="my-dropdown-item-font">Causas</span></a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li class="dropdown-item"><a href="mural.html"><span class="my-dropdown-item-font">Mural</span></a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li class="dropdown-item"><a href="converse.html"><span class="my-dropdown-item-font">Converse</span></a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li class="dropdown-item"><a href="sobre.html"><span class="my-dropdown-item-font">Sobre</span></a></li>
+                    </ul>
+
+                    <!-- Desktop -->
+
+                    <div class="center carousel hide-on-med-and-down">
+                        <a class="carousel-item" href="mural.html">
+                            <h2 class="menu-item flow-text">Mural</h2>
+                        </a>
+                        <a class="carousel-item" href="sobre.html">
+                            <h2 class="menu-item flow-text">Sobre</h2>
+                        </a>
+                        <a class="carousel-item" href="index.html">
+                            <h2 class="menu-item flow-text">Início</h2>
+                        </a>
+                        <a class="carousel-item" href="converse.html">
+                            <h2 class="menu-item flow-text">Fale!</h2>
+                        </a>
+                        <a class="carousel-item" href="causas.html">
+                            <h2 class="menu-item flow-text">Causas</h2>
+                        </a>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <main>
+                <div class="row">
+                    <div class="col s12 center">
+                        <h1 class="white-text">Expresse-se!</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col offset-s2 s8">
+                        <img class="responsive-img" src="assets/resources/images/voice_power.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 white-text">
+                        <h4>
+                            Área destinada a depoimentos, mensagens de apoio e assuntos relevantes a prevenção ao suicídio, todas as mensagens são anônimas.
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="white card">
+                    <form action="." onsubmit="return postar()">
+                        <!--
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">edit</i>
+                                <textarea id="textarea2" class="materialize-textarea mensagem" data-length="300" required></textarea>
+                                <label for="textarea2">Digite o seu texto</label>
+                                <button class="col s2 left btn waves-effect" type="submit" name="action">
+                                    <i class="material-icons">add</i> 
+                                </button></div>
+                        </div>
+-->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">edit</i>
+                                <input id="mensagem" type="text" class="validate mensagem black-text" pattern="[A-z0-9À-ú\s,\.!:;]{10,300}" autofocus required>
+                                <label for="icon_prefix">Escreva seu texto ^^</label>
+                            </div>
+                            <button class="col s2 left btn waves-effect" type="submit" name="action">
+                                    <i class="material-icons">add</i> 
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <div class="row">
+                        <div class="col s12">
+
+                            <a class="white-text right tooltipped btn-floating btn-large numero-mensagens blue pulse" data-position="left" data-tooltip="Número de mensagens "></a>
+
+                        </div>
+                    </div>
+
+                    <div class="row mural muralzinho ">
+
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <footer class="page-footer gradient-vertical-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <img class="responsive-img" src="assets/resources/images/utfpr.png" alt="">
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Disponível em:</h5>
+                    <ul>
+                        <li><i class="material-icons tiny red-text">email</i> <a class="black-text" href="mailto: lucasxtech@gmail.com">Gmail</a></li>
+                        <li><i class="material-icons tiny blue-text">thumb_up</i> <a class="black-text" href="https://www.facebook.com/lucas.aurelio.737">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright black">
+            <div class="container">
+                <a class="flow-text white-text">Lucas Eduardo Aurélio</a>
+                <a class="grey-text text-lighten-4 btn gradient-vertical-grey right" href="sobre.html">Sobre</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inicializar -->
+    <script src="assets/resources/scripts/common.js "></script>
+    <script src="assets/resources/scripts/mural-messages.js "></script>
+</body>
+
+</html>

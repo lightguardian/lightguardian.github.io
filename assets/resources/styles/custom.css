@@ -1,0 +1,153 @@
+html,
+body {
+    height: auto;
+}
+
+/*Background*/
+
+.gradient-vertical-white-black {
+    background: linear-gradient(to bottom, white, grey, black, black);
+    height: 100%;
+
+}
+
+.gradient-vertical-white {
+    background: linear-gradient(to bottom, white, lightGray);
+    height: 100%;
+
+}
+
+.gradient-vertical-grey {
+    background: linear-gradient(to bottom, lightGray, grey);
+    height: 100%;
+
+}
+
+.gradient-vertical-black {
+    background: linear-gradient(to bottom, black, black, grey);
+    height: 100%;
+
+}
+
+/*Dead Tree*/
+
+.dead-tree {
+    background-image: url(../images/dead-tree-detailed.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 100%;
+}
+
+/*Texto do menu carousel*/
+
+.menu-item {
+    text-align: center;
+    font-size: 400%;
+    color: white;
+    font-family: fantasy, sans-serif;
+    font-weight: 100;
+    text-shadow: 5px 5px 4px black;
+}
+
+/*Quando passar o mouse por cima da palavra ele sublinha*/
+
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+/*Itens do carousel*/
+
+.carousel-item {
+    text-align: center;
+    padding: 0 10% 0 10%;
+    color: yellow;
+    width: 5%;
+}
+
+
+
+/*Nav*/
+
+nav {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.mobi-nav {
+    font-size: 80px !important;
+    color: dimgray;
+}
+
+/*Dropdown Menu*/
+
+.dropdown-trigger {
+    padding-top: 20px;
+}
+
+.dropdown-content {
+
+    background-color: dimgray;
+}
+
+.my-dropdown-item-font {
+    color: white;
+    font-family: sans-serif;
+}
+
+/*CARD*/
+
+.card {}
+
+.card-img {
+    width: 100%;
+}
+
+/*Main*/
+
+main {
+    margin: 20% 5% 0 5%;
+}
+
+.estica {
+    margin-top: 20%;
+}
+
+.artigo {
+    font-size: 170%;
+    color: lightgray;
+    font-family: fantasy, sans-serif;
+    font-weight: 100;
+
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 5px black;
+}
+
+.mural,
+.muralzinho {
+    margin: 0 5% 5% 5%;
+}
+
+.transparent {
+    background-color: none;
+    border: none;
+
+}
+
+causas-menu {
+
+    height: 400px;
+}
+
+.tirar-margin {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 600) {
+    html,
+    body,
+        {
+        height: 100%;
+    }
+}
